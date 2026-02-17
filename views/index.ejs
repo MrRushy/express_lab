@@ -8,5 +8,12 @@
     <h1>Welcome to my website!</h1>
     <p>Please Stay a while and look around at absolutely nothing</p>
     <p>HEllo <%= locals.userName ?? 'New User!' %> </p>
+    <% if(locals.userName==="Rushy"){%>        
+        <p><img width = "200" src="book.png" alt="stack of magic books"></p>
+    <% } %>
+
+    <% for(let i=0;i<8;i++){%>        
+        <p><img width = "200" src="book.png" alt="stack of magic books"></p>
+    <% } %>
 </body>
 </html>

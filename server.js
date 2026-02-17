@@ -2,6 +2,7 @@
 const express = require('express'); //Calling express as a function sets up server
 const app = express();
 app.set('view engine', 'ejs');
+app.use(express.static("public"))
 app.get('/',
     (req, res)=>{
     console.log('Here');
