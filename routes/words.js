@@ -14,7 +14,9 @@ router.get('/WOTD', async (req, res)=>{
 
 
 
-
+router.get('allwords' , (req,res)=>{
+    
+});
 
 let getWordFromDictionary = async ()=>{
  try{
