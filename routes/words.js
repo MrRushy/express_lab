@@ -14,9 +14,25 @@ router.get('/WOTD', async (req, res)=>{
 
 
 
-router.get('allwords' , (req,res)=>{
-    
+router.get('/allwords' , async (req,res)=>{
+    let wordArray =  await getAllWords();
+    res.render('allwords',{wordArray:wordArray});
 });
+
+
+
+
+let getAllWords = async ()=>{
+try {
+    const data = await readFile('resources/allwords.txt', 'utf8');
+    let lines = data.split('\n');
+    console.log(lines)
+    return lines
+}catch(err){
+    console.log("Error!")
+}
+}
+
 
 let getWordFromDictionary = async ()=>{
  try{
